@@ -27,12 +27,47 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 // my Routes
 Route::get('/logout', 'HomeController@logout')->name('logout');
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 // view files
-Route::get('/', 'viewController@index')->name('webin');
+Route::get('/', 'web\pagesController@index')->name('webin');
+Route::get('/about_us', 'web\pagesController@aboutUs')->name('aboutUs');
+Route::get('/blog_grid_no_sidebar', 'web\pagesController@blogGridNoSideBar')->name('blogGridNoSideBar');
+Route::get('/blog_grid_sidebar', 'web\pagesController@blogGridSideBar')->name('blogGridSideBar');
+Route::get('/blog_listing_no_sidebar', 'web\pagesController@blogListingNoSideBar')->name('blogListingNoSideBar');
+Route::get('/blog_listing_sidebar', 'web\pagesController@blogListingSideBar')->name('blogListingSideBar');
+Route::get('/car_grid_no_sidebar', 'web\pagesController@carGridNoSideBar')->name('carGridNoSideBar');
+Route::get('/car_grid_sidebar', 'web\pagesController@carGridSideBar')->name('carGridSideBar');
+Route::get('/car_listing_no_sidebar', 'web\pagesController@carListingNoSideBar')->name('carListingNoSideBar');
+Route::get('/car_listing_sidebar', 'web\pagesController@carListingSideBar')->name('carListingSideBar');
+Route::get('/contact_us', 'web\pagesController@contactUS')->name('contactUS');
+Route::get('/single_car', 'web\pagesController@singleCar')->name('singleCar');
+Route::get('/single_post', 'web\pagesController@singlePost')->name('singlePost');
+
+
+
+
 Route::get('/viewcontact', 'viewController@viewContact')->name('viewcontact');
 Route::get('/viewfeedback', 'viewController@viewFeedback')->name('viewfeedback');
 Route::get('/viewproducts', 'viewController@viewProducts')->name('viewproducts');
 Route::get('/viewvehicle_details', 'viewController@viewVehicle_details')->name('viewvehicle_details');
+
+
+
+
+
+
 
 // post data
 Route::post('/sendfeedback', 'viewController@sendFeedback')->name('sendfeedback');
@@ -40,6 +75,20 @@ Route::post('/bookride', 'viewController@bookRide')->name('bookride');
 Route::post('/searchvehicles', 'viewController@searchVehicles')->name('searchvehicles');
 Route::post('/searchmakemodels', 'viewController@searchmakemodels')->name('searchmakemodels');
 Route::post('/add_requestoffers', 'RequestOffersController@store')->name('addrequestoffers');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
