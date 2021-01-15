@@ -13,6 +13,35 @@ use Illuminate\Support\Facades\Auth;
 
 class carFeaturesController extends Controller
 {
+
+    public function listCarFeatures(Request $request)
+    {
+        // return datatable of the makes available
+        // dd($request);
+        $data = ModelFeature::where('status', 1)
+                            ->where('model_id', $request->model_id)
+                            ->get();
+        return Datatables::of($data)
+        ->addIndexColumn()
+        ->editColumn('created_at', function ($row){
+            return date_format($row->created_at, 'Y/m/d H:i'); 
+        })  
+        ->addColumn('action', function($row){
+            $btn = '<button type="button" 
+                            data-toggle="tooltip" 
+                            title="" 
+                            class="btn btn-link btn-danger" 
+                            onclick="delCarFeature(`'.$row->id.'`)"
+                            data-original-title="Remove">
+                        <i class="fa fa-times"></i>
+                    </button>';
+            return $btn;
+        })
+        ->rawColumns(['action'])   
+        ->make(true);
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -26,13 +55,25 @@ class carFeaturesController extends Controller
             return Datatables::of($data)
                 ->addIndexColumn()
                 ->editColumn('created_at', function ($row){
-                    return date_format($row->created_at, 'Y-m-d H:i:s'); 
+                    return date_format($row->created_at, 'Y/m/d H:i'); 
                 })
                 
                 ->addColumn('action', function($row){
-
-                    $btn = '<a href="javascript:void(0)" onclick="editCarMake(`'.$row->id.'`)" class="edit btn btn-success btn-sm">Edit</a> 
-                            <a href="javascript:void(0)" onclick="delCarMake(`'.$row->id.'`)" class="delete btn btn-danger btn-sm">Delete</a>';
+                    $btn = '<button type="button" 
+                                    data-toggle="tooltip" 
+                                    class="btn btn-link btn-primary btn-lg" 
+                                    onclick="editCarMake(`'.$row->id.'`)"
+                                    data-original-title="Edit Car">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button type="button" 
+                                    data-toggle="tooltip" 
+                                    title="" 
+                                    class="btn btn-link btn-danger" 
+                                    onclick="delCarMake(`'.$row->id.'`)"
+                                    data-original-title="Remove">
+                                <i class="fa fa-times"></i>
+                            </button>';
                     return $btn;
                 })
                 ->rawColumns(['action'])
@@ -51,7 +92,7 @@ class carFeaturesController extends Controller
      */
     public function create()
     {
-        return view('Admin.veh_features');
+        return view('Admin.pages.features');
     }
 
     /**

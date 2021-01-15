@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use DataTables;
 use DateTime;
@@ -10,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use Image;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Testimonial;
 
 class testimonialController extends Controller
 {

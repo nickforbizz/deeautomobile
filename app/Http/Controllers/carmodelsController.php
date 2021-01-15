@@ -29,11 +29,28 @@ class carmodelsController extends Controller
                 ->editColumn('created_at', function ($row){
                     return date_format($row->created_at, 'Y-m-d H:i:s'); 
                 })
-                
+                ->addColumn('make', function ($row){
+                    $make = VehicleMake::where('id', $row->make_id)->first();
+                    return $make->name; 
+                })                
                 ->addColumn('action', function($row){
 
-                    $btn = '<a href="javascript:void(0)" onclick="editCarMake(`'.$row->id.'`)" class="edit btn btn-success btn-sm">Edit</a> 
-                            <a href="javascript:void(0)" onclick="delCarMake(`'.$row->id.'`)" class="delete btn btn-danger btn-sm">Delete</a>';
+                    $btn = '<button type="button" 
+                                    data-toggle="tooltip" 
+                                    class="btn btn-link btn-primary btn-lg" 
+                                    onclick="editCarMake(`'.$row->id.'`)"
+                                    data-original-title="Edit Car">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button type="button" 
+                                    data-toggle="tooltip" 
+                                    title="" 
+                                    class="btn btn-link btn-danger" 
+                                    onclick="delCarMake(`'.$row->id.'`)"
+                                    data-original-title="Remove">
+                                <i class="fa fa-times"></i>
+                            </button>';
+
                     return $btn;
                 })
                 ->rawColumns(['action'])
@@ -53,7 +70,7 @@ class carmodelsController extends Controller
     public function create()
     {
         $makes = VehicleMake::where('status', 1)->get(['name', 'id']);
-        return view('Admin.product_models', compact('makes'));
+        return view('Admin.pages.models', compact('makes'));
     }
 
     /**
@@ -73,7 +90,7 @@ class carmodelsController extends Controller
             $make_data = CarModel::create([
                 'name' => $title,
                 'user_id' => Auth::user()->id,
-                'make_id' => $request->model_cat,
+                'make_id' => $request->make_id,
                 'description' => $description,
                 // 'image' => Storage::putFile('public/makes', $image),
             ]);
@@ -129,8 +146,9 @@ class carmodelsController extends Controller
         //vars from request
         $make_id = $request->make_id;
         $make_name = $request->title;
-        $make_data = CarModel::where('id', $make_id)->update([
+        $make_data = CarModel::where('id', $request->model_id)->update([
             'name' => $make_name,
+            'make_id' => $make_id,
             'user_id' => Auth::user()->id,
             'description' => $request->description,
         ]);
@@ -162,10 +180,8 @@ class carmodelsController extends Controller
     {
         //
         $id = $request->id;
-        $fetch_make_data = CarModel::where('id', $id)->first();
-        $make_data = CarModel::where('id', $id)->delete();
-        if ($make_data) {
-            Storage::delete($fetch_make_data->image);
+        $model_data = CarModel::where('id', $id)->delete();
+        if ($model_data) {
             return [
                 'code' => 1,
                 'msg' => 'Record deleted successfully'

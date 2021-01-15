@@ -25,7 +25,7 @@ class pagesController extends Controller
         // $limit = (int) $request->limit = 2;
 
         $offset = 0;
-        $limit = 2;
+        $limit = 12;
 
 
         // fetch data
@@ -36,11 +36,12 @@ class pagesController extends Controller
                             ->with('modelsImgs')
                             ->orderBy('id', 'desc')
                             ->get();
+        $makes = VehicleMake::where('status', 1)->get(['name', 'id']);
+        $brands = VehicleModel::where('status', 1)->get(['name', 'id']);
 
         $testimonials = Testimonial::where('status', 1)->paginate(20);
-        // return $cars[0]->modelsImgs;
-                            // dd($cars->modelsImgs);
-        return view('Web.pages.index', compact('cars', 'testimonials'));
+        // return $cars[0];
+        return view('Web.pages.index', compact('cars', 'testimonials', 'makes', 'brands'));
     }
 
     public function viewContact()
@@ -319,7 +320,15 @@ class pagesController extends Controller
      */
     public function carGridNoSideBar(Request $request)
     {
-        return view('Web.pages.car_grid_no_sidebar');
+        // fetch data
+        $cars = VehicleModel::where('status', 1)                            
+                            ->with('user')
+                            ->with('modelsImgs')
+                            ->orderBy('id', 'desc')
+                            ->paginate(20);
+        // return $cars;
+        $makes = VehicleMake::where('status', 1)->get(['name', 'id']);
+        return view('Web.pages.car_grid_no_sidebar', compact('cars', 'makes'));
     }
 
     /**
@@ -330,7 +339,15 @@ class pagesController extends Controller
      */
     public function carGridSideBar(Request $request)
     {
-        return view('Web.pages.car_grid_sidebar');
+        // fetch data
+        $cars = VehicleModel::where('status', 1)                            
+                            ->with('user')
+                            ->with('modelsImgs')
+                            ->orderBy('id', 'desc')
+                            ->paginate(20);
+        // return $cars;
+        $makes = VehicleMake::where('status', 1)->get(['name', 'id']);
+        return view('Web.pages.car_grid_sidebar', compact('cars', 'makes'));
     }
 
     /**
@@ -341,7 +358,15 @@ class pagesController extends Controller
      */
     public function carListingNoSideBar(Request $request)
     {
-        return view('Web.pages.car_listing_no_sidebar');
+        // fetch data
+        $cars = VehicleModel::where('status', 1)                            
+                            ->with('user')
+                            ->with('modelsImgs')
+                            ->orderBy('id', 'desc')
+                            ->paginate(20);
+        // return $cars;
+        $makes = VehicleMake::where('status', 1)->get(['name', 'id']);
+        return view('Web.pages.car_listing_no_sidebar', compact('cars', 'makes'));
     }
 
     /**
@@ -352,7 +377,15 @@ class pagesController extends Controller
      */
     public function carListingSideBar(Request $request)
     {
-        return view('Web.pages.car_listing_sidebar');
+        // fetch data
+        $cars = VehicleModel::where('status', 1)                            
+                            ->with('user')
+                            ->with('modelsImgs')
+                            ->orderBy('id', 'desc')
+                            ->paginate(20);
+        // return $cars;
+        $makes = VehicleMake::where('status', 1)->get(['name', 'id']);
+        return view('Web.pages.car_listing_sidebar', compact('cars', 'makes'));
     }
 
     /**
@@ -374,7 +407,26 @@ class pagesController extends Controller
      */
     public function singleCar(Request $request)
     {
-        return view('Web.pages.single_car');
+        $offset = 0;
+        $limit = 2;
+        $id =  $request->checkProduct;
+        $car = VehicleModel::where('id', $id)->first();
+        // return $car;
+
+        // fetch data
+        $veh_features = ModelFeature::where('model_id',$car->id)->get();
+        $cars = VehicleModel::where('status', 1)
+                            ->where('make_id', $car->make_id)
+                            ->where('id', '<>', $car->id)
+                            ->skip($offset)
+                            ->take($limit)
+                            ->with('user')
+                            ->with('modelsImgs')
+                            ->orderBy('id', 'desc')
+                            ->get();
+        $modelsImgs = ($car->modelsImgs);
+        // return $veh_features;
+        return view('Web.pages.single_car', compact('car', 'modelsImgs', 'cars', 'veh_features'));
     }
 
 

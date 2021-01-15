@@ -92,7 +92,7 @@ class modelsController extends Controller
         return view('Admin.products')->with([
             'makes' => $makes,
             'models' => $models,
-            'features' => $features,
+            'features' => $features, 
         ]);
     }
 
@@ -224,44 +224,76 @@ class modelsController extends Controller
     {
         //vars from request
         $model_id = $request->model_id;
-        $model_name = $request->model_name;
-        $model_cat = $request->model_cat;
-        $model_description = $request->model_description;
-        $model_label = $request->model_label;
-        $model_type = $request->model_type;
+        
 
-        $veh = CarModel::where('id',$model_type)->first();
-
-        $make_data = VehicleModel::where('id', $model_id)->update([
-            'name' => $veh->name,
-            'speed' => $speed,
-            'make_id' => $model_cat,
-            'description' => $model_description,
-            'label' => $model_label,
-            'price' => $request->model_price,
-            'manYr' => $request->model_manYr,
-            'mileage' => $request->model_mileage,
-            'condition' => $request->model_condition,
-            'bodyType' => $request->model_bodyType,
-            'colour' => $request->model_colour,
-            'fuel' => $request->model_fuel,
-            'transmission' => $request->model_transmission,
-            'duty' => $request->model_duty,
-            'interior' => $request->model_interior,
-            'cc' => $request->model_cc,
-        ]);
-
-        if ($make_data) {
-            return [
-                'code' => 1,
-                'msg' => 'Record updated successfully'
-            ];
-        } else {
+        $veh = CarModel::where('id',$request->model_type)->get();
+        if (count($veh) > 0) {
+            $veh = $veh[0]; 
+        }else {
             return [
                 'code' => -1,
-                'msg' => 'Record did not updated '
+                'msg' => 'select the name of the vehicle'
             ];
         }
+
+        $check_data = VehicleModel::where('id', $model_id)->get();
+        if (count($check_data) > 0) {
+            $make_data = VehicleModel::where('id', $model_id)->update([
+                'name' => $veh->name,
+                'speed' => $request->speed,
+                'make_id' => $request->model_cat,
+                'description' => $request->model_description,
+                'label' => $request->model_label,
+                'price' => $request->model_price,
+                'manYr' => $request->model_manYr,
+                'mileage' => $request->model_mileage,
+                'condition' => $request->model_condition,
+                'bodyType' => $request->model_bodyType,
+                'colour' => $request->model_colour,
+                'fuel' => $request->model_fuel,
+                'transmission' => $request->model_transmission,
+                'duty' => $request->model_duty,
+                'interior' => $request->model_interior,
+                'cc' => $request->model_cc,
+            ]);
+    
+            if ($make_data) {
+                if ($request->file('model_img')) {
+                    $fetchModel_data_id = $model_id;
+        
+                    foreach ($request->file('model_img') as $doc){
+                        $model_imgs =  ModelsImg::where('veh_model_id', $fetchModel_data_id)->get();
+                        if(count($model_imgs) > 0){
+                            foreach ($model_imgs as $doc){
+                                Storage::delete($doc->media_link);
+                                ModelsImg::where('id', $doc->id)->delete();
+                            }
+                        }
+                        ModelsImg::create([
+                            'user_id'=>Auth::guard('web')->user()->id,
+                            'veh_model_id'=>$fetchModel_data_id,
+                            'name'=>$doc->getClientOriginalName(),
+                            'media_link'=>Storage::putFile('public/models', $doc),
+                            'type'=>$doc->getClientOriginalExtension()
+                        ]);
+                    }
+                }
+                return [
+                    'code' => 1,
+                    'msg' => 'Record updated successfully'
+                ];
+            } else {
+                return [
+                    'code' => -1,
+                    'msg' => 'Record did not updated '
+                ];
+            }
+        }
+
+        return [
+            'code' => -1,
+            'msg' => 'Record not found '
+        ];
         
         return $request;
     }

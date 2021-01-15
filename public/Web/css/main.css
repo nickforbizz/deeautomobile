@@ -67,7 +67,7 @@ section {
 
 .primary-button a:hover {
     color: #1e1e1e;
-    background-color: #f4c23d
+    background-color: #3d7df4
 }
 
 #search button {
@@ -95,12 +95,12 @@ section {
 
 #search button:hover {
     color: #1e1e1e;
-    background-color: #f4c23d!important
+    background-color: #3d7df4!important
 }
 
 .secondary-button a {
     display: inline-block;
-    background: #f4c23d;
+    background: #3d7df4;
     padding: 10px 20px;
     text-align: center;
     letter-spacing: 0.5px;
@@ -223,7 +223,7 @@ section {
     top: 15px;
     right: 15px;
     color: #1e1e1e;
-    background-color: #f4c23d;
+    background-color: #3d7df4;
     border-color: transparent;
     opacity: 1;
     padding: 10px 17px;
@@ -272,7 +272,7 @@ section {
 .preloader-bounce>span:nth-child(3) {
     -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
-    background: #f4c23d
+    background: #3d7df4
 }
 
 @-webkit-keyframes bounce {
@@ -321,7 +321,7 @@ section {
     text-align: center;
     line-height: 40px;
     border-radius: 3px;
-    background-color: #f4c23d;
+    background-color: #3d7df4;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s
@@ -375,7 +375,7 @@ section {
 
 .page-heading .heading-content-bg .heading-content h2 em {
     font-style: normal;
-    color: #f4c23d
+    color: #3d7df4
 }
 
 .page-heading .heading-content-bg .heading-content p {
@@ -384,7 +384,7 @@ section {
     letter-spacing: 1px;
     font-weight: 300;
     text-transform: uppercase;
-    color: #f4c23d
+    color: #3d7df4
 }
 
 .page-heading .heading-content-bg .heading-content p a {
@@ -395,7 +395,7 @@ section {
 }
 
 .page-heading .heading-content-bg .heading-content p a:hover {
-    color: #f4c23d
+    color: #3d7df4
 }
 
 .page-heading .heading-content-bg .heading-content p em {
@@ -410,7 +410,7 @@ section {
 
 .section-heading .icon i {
     color: #1e1e1e;
-    background-color: #f4c23d;
+    background-color: #3d7df4;
     border-radius: 50%;
     font-size: 18px;
     width: 44px;
@@ -469,7 +469,7 @@ section {
 
 .sep-section-heading h2 em {
     font-style: normal;
-    color: #f4c23d
+    color: #3d7df4
 }
 
 .sep-section-heading h2:after {
@@ -617,7 +617,7 @@ section {
 }
 
 .site-header #cssmenu>ul>li:hover>a {
-    color: #f4c23d
+    color: #3d7df4
 }
 
 .site-header #cssmenu>ul>li.has-sub>a {
@@ -722,7 +722,7 @@ section {
 
 .site-header #cssmenu ul ul li:hover>a,
 .site-header #cssmenu ul ul li a:hover {
-    color: #f4c23d
+    color: #3d7df4
 }
 
 .site-header #cssmenu ul ul li.has-sub>a:after {
@@ -769,7 +769,7 @@ section {
 
 @media (max-width:767px) {
     .site-header {
-        background-color: #f4c23d;
+        background-color: #3d7df4;
         -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15)
     }
@@ -876,7 +876,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         font-family: 'FontAwesome';
         float: right;
         color: #1e1e1e;
-        background-color: #f4c23d;
+        background-color: #3d7df4;
         display: inline-block;
         width: 46px;
         height: 46px;
@@ -1031,7 +1031,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.Modern-Slider .NextArrow:hover {
-	    background: #f4c23d
+	    background: #3d7df4
 	}
 
 	.Modern-Slider .NextArrow:before {
@@ -1059,7 +1059,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.Modern-Slider .PrevArrow:hover {
-	    background: #f4c23d
+	    background: #3d7df4
 	}
 
 	.Modern-Slider .PrevArrow:before {
@@ -1086,7 +1086,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	    float: left;
 	    width: 0px;
 	    height: 5px;
-	    background: #f4c23d;
+	    background: #3d7df4;
 	    position: absolute;
 	    left: 0px;
 	    bottom: 0px
@@ -1111,7 +1111,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.Modern-Slider .item h3 em {
-	    color: #f4c23d;
+	    color: #3d7df4;
 	    font-style: normal
 	}
 
@@ -1405,7 +1405,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	section.top-slider-features .slider-top-features .owl-nav .owl-next span:hover {
-	    background-color: #f4c23d;
+	    background-color: #3d7df4;
 	    color: #1e1e1e
 	}
 
@@ -1431,7 +1431,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	section.top-slider-features .slider-top-features .owl-nav .owl-prev span:hover {
-	    background-color: #f4c23d;
+	    background-color: #3d7df4;
 	    color: #1e1e1e
 	}
 
@@ -1472,13 +1472,13 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 
 	.on-grids .car-item .thumb-content .car-banner a,
 	.recent-cars .car-item .thumb-content .car-banner a {
-	    background-color: #f4c23d;
+	    background-color: #3d7df4;
 	    border-radius: 3px;
 	    color: #1e1e1e;
 	    font-size: 13px;
 	    font-weight: 700;
 	    text-transform: uppercase;
-	    width: 85px;
+	    padding: 0 1em !important;
 	    height: 36px;
 	    text-align: center;
 	    line-height: 36px;
@@ -1566,7 +1566,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 
 	.on-grids .car-item .down-content ul li .item:hover,
 	.recent-cars .car-item .down-content ul li .item:hover {
-	    background-color: #f4c23d
+	    background-color: #3d7df4
 	}
 
 	.on-grids .car-item .down-content ul li .item:hover i,
@@ -1618,13 +1618,13 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.on-listing .car-item .thumb-content .car-banner a {
-	    background-color: #f4c23d;
+	    background-color: #3d7df4;
 	    border-radius: 3px;
 	    color: #1e1e1e;
 	    font-size: 13px;
 	    font-weight: 700;
 	    text-transform: uppercase;
-	    width: 85px;
+	    padding: 0 1em !important;
 	    height: 36px;
 	    text-align: center;
 	    line-height: 36px;
@@ -1716,7 +1716,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.on-listing .car-item .down-content ul li .item:hover {
-	    background-color: #f4c23d
+	    background-color: #3d7df4
 	}
 
 	.on-listing .car-item .down-content ul li .item:hover i {
@@ -1805,7 +1805,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	    text-align: center;
 	    line-height: 40px;
 	    border-radius: 3px;
-	    background-color: #f4c23d;
+	    background-color: #3d7df4;
 	    color: #1e1e1e
 	}
 
@@ -1866,7 +1866,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	.more-details .item .contact-info i {
 	    width: 40px;
 	    height: 40px;
-	    background-color: #f4c23d;
+	    background-color: #3d7df4;
 	    text-align: center;
 	    line-height: 40px;
 	    border-radius: 3px;
@@ -1940,13 +1940,13 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.similar-car .car-item .thumb-content .car-banner a {
-	    background-color: #f4c23d;
+	    background-color: #3d7df4;
 	    border-radius: 3px;
 	    color: #1e1e1e;
 	    font-size: 13px;
 	    font-weight: 700;
 	    text-transform: uppercase;
-	    width: 85px;
+	    padding: 0 1em !important;
 	    height: 36px;
 	    text-align: center;
 	    line-height: 36px;
@@ -2017,7 +2017,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.similar-car .car-item .down-content ul li .item:hover {
-	    background-color: #f4c23d
+	    background-color: #3d7df4
 	}
 
 	.similar-car .car-item .down-content ul li .item:hover i {
@@ -2086,7 +2086,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.latest-news .item .thumb-content .date-post a {
-	    background-color: #f4c23d;
+	    background-color: #3d7df4;
 	    border-radius: 3px;
 	    color: #1e1e1e;
 	    font-size: 13px;
@@ -2164,7 +2164,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.blog-page .blog-grid-post .item .thumb-content .date-post a {
-	    background-color: #f4c23d;
+	    background-color: #3d7df4;
 	    border-radius: 3px;
 	    color: #1e1e1e;
 	    font-size: 13px;
@@ -2270,7 +2270,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.blog-page .blog-classic-post .item .thumb-content .date-post a {
-	    background-color: #f4c23d;
+	    background-color: #3d7df4;
 	    border-radius: 3px;
 	    color: #1e1e1e;
 	    font-size: 13px;
@@ -2425,7 +2425,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	    color: #2959ad;
 	    font-family: 'georgia', serif;
 	    line-height: 26px;
-	    border-left: 3px solid #f4c23d
+	    border-left: 3px solid #3d7df4
 	}
 
 	.blog-page .single-post .comments {
@@ -2482,7 +2482,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.blog-page .single-post .comments .comments-content .continue-button a:hover {
-	    color: #f4c23d;
+	    color: #3d7df4;
 	    -webkit-transition: all 0.5s;
 	    -o-transition: all 0.5s;
 	    transition: all 0.5s
@@ -2531,7 +2531,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.blog-page .single-post .leave-comment input:focus {
-	    border-color: #f4c23d
+	    border-color: #3d7df4
 	}
 
 	.blog-page .single-post .leave-comment textarea {
@@ -2553,7 +2553,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.blog-page .single-post .leave-comment textarea:focus {
-	    border-color: #f4c23d
+	    border-color: #3d7df4
 	}
 	
 	/* 03.02. Blog Items Ends */
@@ -2610,7 +2610,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	    width: 40px;
 	    height: 40px;
 	    border-radius: 3px;
-	    background-color: #f4c23d;
+	    background-color: #3d7df4;
 	    text-align: center;
 	    line-height: 40px;
 	    display: inline-block;
@@ -2652,7 +2652,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.contact-content .send-message input:focus {
-	    border-color: #f4c23d
+	    border-color: #3d7df4
 	}
 
 	.contact-content .send-message textarea {
@@ -2671,7 +2671,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.contact-content .send-message textarea:focus {
-	    border-color: #f4c23d
+	    border-color: #3d7df4
 	}
 
 	@media (max-width:991px) {
@@ -2723,7 +2723,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 
 	.call-to-action .call-to-action-content p em {
 	    font-style: normal;
-	    color: #f4c23d;
+	    color: #3d7df4;
 	    font-weight: 600
 	}
 
@@ -2774,7 +2774,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	    text-align: center;
 	    line-height: 50px;
 	    border-radius: 50%;
-	    background-color: #f4c23d;
+	    background-color: #3d7df4;
 	    -webkit-transition: all 0.5s;
 	    -o-transition: all 0.5s;
 	    transition: all 0.5s
@@ -2819,7 +2819,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 	    padding: 0px 30px 30px 30px;
 	    width: 100%;
-	    border-top: 3px solid #f4c23d
+	    border-top: 3px solid #3d7df4
 	}
 
 	@media (max-width:991px) {
@@ -2838,7 +2838,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 
 	.features-search-section .search-content .search-heading .icon i {
 	    color: #1e1e1e;
-	    background-color: #f4c23d;
+	    background-color: #3d7df4;
 	    border-radius: 50%;
 	    font-size: 18px;
 	    width: 44px;
@@ -2853,7 +2853,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	.features-search-section .search-content .search-heading .icon i:after {
 	    width: 44px;
 	    height: 3px;
-	    background-color: #f4c23d;
+	    background-color: #3d7df4;
 	    position: absolute;
 	    left: 50%;
 	    -webkit-transform: translateX(-50%);
@@ -2909,7 +2909,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.features-search-section .search-content .search-form select:focus {
-	    border-color: #f4c23d
+	    border-color: #3d7df4
 	}
 
 	.features-search-section .search-content .search-form .secondary-button a {
@@ -2950,7 +2950,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 
 	.sidebar-widgets .sidebar-widget .sidebar-heading h4 em {
 	    font-style: normal;
-	    color: #f4c23d
+	    color: #3d7df4
 	}
 
 	.sidebar-widgets .sidebar-widget .sidebar-heading h4:after {
@@ -2970,7 +2970,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 	    padding: 0px 30px 30px 30px;
 	    width: 100%;
-	    border-top: 3px solid #f4c23d
+	    border-top: 3px solid #3d7df4
 	}
 
 	@media (max-width:991px) {
@@ -2989,7 +2989,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 
 	.sidebar-widgets .sidebar-widget .search-content .search-heading .icon i {
 	    color: #1e1e1e;
-	    background-color: #f4c23d;
+	    background-color: #3d7df4;
 	    border-radius: 50%;
 	    font-size: 18px;
 	    width: 44px;
@@ -3004,7 +3004,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	.sidebar-widgets .sidebar-widget .search-content .search-heading .icon i:after {
 	    width: 44px;
 	    height: 3px;
-	    background-color: #f4c23d;
+	    background-color: #3d7df4;
 	    position: absolute;
 	    left: 50%;
 	    -webkit-transform: translateX(-50%);
@@ -3050,7 +3050,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.sidebar-widgets .sidebar-widget .search-content .search-form input:focus {
-	    border-color: #f4c23d
+	    border-color: #3d7df4
 	}
 
 	.sidebar-widgets .sidebar-widget .search-content .search-form select {
@@ -3073,7 +3073,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.sidebar-widgets .sidebar-widget .search-content .search-form select:focus {
-	    border-color: #f4c23d
+	    border-color: #3d7df4
 	}
 
 	.sidebar-widgets .sidebar-widget .search-content .search-form .secondary-button a {
@@ -3095,7 +3095,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.sidebar-widgets .sidebar-widget .search-widget input:focus {
-	    border-color: #f4c23d
+	    border-color: #3d7df4
 	}
 
 	.sidebar-widgets .sidebar-widget .text-widget ul {
@@ -3110,7 +3110,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	.sidebar-widgets .sidebar-widget .text-widget ul li a {
 	    width: 38px;
 	    height: 38px;
-	    background-color: #f4c23d;
+	    background-color: #3d7df4;
 	    display: inline-block;
 	    text-align: center;
 	    font-size: 13px;
@@ -3172,7 +3172,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.sidebar-widgets .sidebar-widget .recent-posts ul li:hover h6 {
-	    color: #f4c23d
+	    color: #3d7df4
 	}
 
 	.sidebar-widgets .sidebar-widget .archives ul,
@@ -3240,8 +3240,8 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.sidebar-widgets .sidebar-widget .tags ul li a:hover {
-	    background-color: #f4c23d;
-	    border-color: #f4c23d
+	    background-color: #3d7df4;
+	    border-color: #3d7df4
 	}
 
 	/* 03.06. Sidebar & Widgets Ends */
@@ -3275,7 +3275,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	    font-size: 14px;
 	    text-transform: uppercase;
 	    font-weight: 600;
-	    color: #f4c23d
+	    color: #3d7df4
 	}
 
 	.more-about-us .right-content h4 {
@@ -3335,7 +3335,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 
 	.testimonials .item ul li {
 	    display: inline-block;
-	    color: #f4c23d
+	    color: #3d7df4
 	}
 
 	.testimonials .item ul li:last-child {
@@ -3343,7 +3343,8 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
 	}
 
 	.testimonials .item p {
-	    margin-top: 15px
+		margin-top: 15px;
+		min-height: 10em;
 	}
 
 	.testimonials .item img {
@@ -3446,13 +3447,13 @@ footer .footer-item h2 {
 
 footer .footer-item h2 em {
     font-style: normal;
-    color: #f4c23d
+    color: #3d7df4
 }
 
 footer .footer-item h2:after {
     width: 30px;
     height: 3px;
-    background-color: #f4c23d;
+    background-color: #3d7df4;
     left: 0;
     top: 30px;
     position: absolute;
@@ -3480,7 +3481,7 @@ footer .footer-item ul li a {
 }
 
 footer .footer-item ul li a:hover {
-    color: #f4c23d;
+    color: #3d7df4;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s
@@ -3558,7 +3559,7 @@ footer .footer-item .about-us ul li a {
 
 footer .footer-item .about-us ul li a:hover {
     color: #1e1e1e;
-    background-color: #f4c23d
+    background-color: #3d7df4
 }
 
 footer .footer-item .our-gallery ul li {
@@ -3593,7 +3594,7 @@ footer .footer-item .quick-search input {
 
 footer .footer-item .quick-search input:focus {
     outline: none;
-    border: 1px solid #f4c23d
+    border: 1px solid #3d7df4
 }
 
 footer .sub-footer {
@@ -3613,7 +3614,7 @@ footer .sub-footer p {
 }
 
 footer .sub-footer p a {
-    color: #f4c23d;
+    color: #3d7df4;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s

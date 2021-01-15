@@ -30,7 +30,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('Admin.index');
+        return view('Admin.pages.index');
+    }
+
+
+    /**
+     * Undocumented function
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function template(Request $request)
+    {
+        return view('Admin.pages.template');
     }
 
 

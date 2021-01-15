@@ -94,7 +94,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     // protected Routes
     Route::get('/backend', function () {
-        return view('Admin.index'); 
+        return view('Admin.pages.index'); 
     });
 
     Route::post('/register_user', 'HomeController@createUser')->name('registerUser');
@@ -104,6 +104,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
      Route::get('/home', 'HomeController@index')->name('home');
      // user
      Route::get('/profile', 'HomeController@profile')->name('profile');
+
+    //  template
+     Route::get('/view_template', 'HomeController@template')->name('template');
+
 
     // users
     Route::get('/view_users', 'UserController@create')->name('viewusers');
@@ -143,13 +147,24 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
      Route::post('/add_makes', 'makesController@store')->name('addMakes');
      Route::get('/del_make', 'makesController@destroy')->name('delMake');
 
-     // makes
+     // testimonials
      Route::get('/view_testimonials', 'testimonialController@create')->name('viewTestimonials');
      Route::get('/view_testimonial', 'testimonialController@show')->name('viewTestimonial');
      Route::get('/list_testimonials', 'testimonialController@index')->name('listTestimonials');
      Route::post('/edit_testimonials', 'testimonialController@update')->name('editTestimonials');
      Route::post('/add_testimonials', 'testimonialController@store')->name('addTestimonials');
      Route::get('/del_testimonial', 'testimonialController@destroy')->name('delTestimonial');
+
+
+
+    //  settings
+    Route::get('/view_settings', 'admin\settingsController@settingsView')->name('viewSettings');
+
+
+    //  cars
+    Route::get('/view_cars', 'admin\carController@create')->name('viewcars');
+    Route::get('/list_cars', 'admin\carController@index')->name('listcars');
+    Route::get('/list_cars_features', 'carFeaturesController@listCarFeatures')->name('listCarFeatures');
 
     //  models
      Route::get('/view_carmodels', 'carmodelsController@create')->name('viewcarModels');

@@ -77,7 +77,7 @@
 					               		<li><a href="{{ route('carGridNoSideBar') }}">Car Grid</a></li>
 					            	</ul>
 					         	</li>
-					         	<li><a href="{{ route('singleCar') }}">Single Car</a></li>
+					         	<!-- <li><a href="{{ route('singleCar') }}">Single Car</a></li> -->
 					      	</ul>
 					   	</li>
 					   	<li class='active'><a href='#'>Blog</a>

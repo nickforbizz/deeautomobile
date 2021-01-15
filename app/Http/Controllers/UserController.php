@@ -28,13 +28,26 @@ class UserController extends Controller
             return Datatables::of($data)
                 ->addIndexColumn()
                 ->editColumn('created_at', function ($row){
-                    return date_format($row->created_at, 'Y-m-d H:i:s'); 
+                    return date_format($row->created_at, 'Y/m/d H:i'); 
                 })
                 
                 ->addColumn('action', function($row){
-
-                    $btn = '<a href="javascript:void(0)" onclick="edituser(`'.$row->id.'`)" class="edit btn btn-success btn-sm">Edit</a> 
-                            <a href="javascript:void(0)" onclick="deluser(`'.$row->id.'`)" class="delete btn btn-danger btn-sm">Delete</a>';
+                    $btn = '<button type="button" 
+                                    data-toggle="tooltip" 
+                                    class="btn btn-link btn-primary btn-lg" 
+                                    onclick="edituser(`'.$row->id.'`)"
+                                    data-original-title="Edit Task">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button type="button" 
+                                    data-toggle="tooltip" 
+                                    title="" 
+                                    class="btn btn-link btn-danger" 
+                                    onclick="deluser(`'.$row->id.'`)"
+                                    data-original-title="Remove">
+                                <i class="fa fa-times"></i>
+                            </button>';
+                   
                     return $btn;
                 })
                 ->rawColumns(['action'])
@@ -53,7 +66,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('Admin.users');
+        return view('Admin.pages.users');
     }
 
     /**
@@ -71,11 +84,14 @@ class UserController extends Controller
             'password' => 'required|confirmed|min:6',
         ]);
 
+
+        // return $validate->errors();
+
         if ($validate->fails()) {
             // return back()->withErrors($validate->errors());
             return  [
                 'code'=> -2,
-                'msg'=>'fields [ name, email and password] are required'
+                'msg'=>json_encode($validate->errors())
             ];
         }
 
