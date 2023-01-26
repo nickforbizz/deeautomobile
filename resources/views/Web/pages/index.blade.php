@@ -137,33 +137,39 @@
 									<span>We made a quick search just for you</span>
 								</div>
 							</div>
+
 							<div class="search-form">
-								<div class="row">
-		                            <div class="col-md-12">       
-		                                <div class="input-select">
-		                                    <select name="make" id="make">
-		                                        <option value="-1">Select Make</option>
-												@foreach($makes as $make)
-													<option value="{{ $make->id }}">{{ $make->name }}</option>
-												@endforeach
-		                                    </select>
-		                                </div>
-		                            </div>
-		                            <div class="col-md-12">       
-		                                <div class="input-select">
-		                                    <select name="brand" id="brand">
-		                                        <option value="-1">Select Mark</option>
-		                                          
-		                                    </select>
-		                                </div>
-		                            </div>
-		                            
-		                            <div class="col-md-12">
-		                            	<div class="secondary-button">
-		                            		<a href="#">Search <i class="fa fa-search"></i></a>
-		                            	</div>
-		                            </div>
-		                        </div>
+								<form id="car_search_form">
+
+									<div class="row">
+										<div class="col-md-12">       
+											<div class="input-select">
+												<select name="make" id="make" required>
+													<option disabled selected>Select Make</option>
+													@foreach($makes as $make)
+														<option value="{{ $make->id }}">{{ $make->name }}</option>
+													@endforeach
+												</select>
+											</div>
+										</div>
+										<div class="col-md-12">       
+											<div class="input-select">
+												<select name="brand" id="brand">
+													<option disabled selected>Select Mark</option>
+													  
+												</select>
+											</div>
+										</div>
+										
+										<div class="col-md-12">
+											<div class="secondary-button">
+												<!-- <button type="submit" class="btn btn-info">Search <i class="btn fa fa-search"></i></button> -->
+												<a href="javascript:void(0)" id="search_car">Search <i class="btn fa fa-search"></i></a>
+											</div>
+										</div>
+									</div>
+
+								</form>
 		                    </div>
 						</div>
 					</div>
@@ -409,5 +415,21 @@
 				}
 			});
 		});
+
+
+		// search car
+		$("#search_car").click(() => {
+			// $("#car_search_form").submit();
+			let make = $("#make").val();
+			let brand = $("#brand").val();
+
+			if (make== null || brand == null) {
+				toastr.warning('Empty Search', 'Please Select Make and Brand!', {timeOut: 5000})
+			}else{
+				carSearch(make, brand)
+
+			}
+
+		})
 	</script>
 @endpush
