@@ -48,7 +48,7 @@
 													<a href="{{ route('singleCar', ['checkProduct' =>$car->id]) }}"><h4>{{ $car->name }}</h4></a>
 													<span>{{ $car->price }}/=</span>
 													<div class="line-dec"></div>
-													<p style="min-height: 8em;">{{ substr($car->description, 0, 300) }} </p>
+													<div style="min-xheight: 8em;">{{ substr($car->description, 0, 300) }} </div>
 													<ul class="car-info">
 														<li><div class="item"><i class="flaticon flaticon-calendar"></i><p> {{ $car->manYr }} </p></div></li>
 														<li><div class="item"><i class="flaticon flaticon-speed"></i><p> {{ $car->speed }} p/h</p></div></li>
