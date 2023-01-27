@@ -65,7 +65,7 @@ class pagesController extends Controller
         
 
         // fetch data
-        $makes = VehicleMake::where('status', 1)->get(['name', 'id']);
+        $makes = VehicleMake::where('status', 1)->get(['name', 'id']); 
         $brands = VehicleModel::where('status', 1)->get(['name', 'id']);
 
         $cars = VehicleModel::where('status', 1)

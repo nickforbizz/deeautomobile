@@ -145,7 +145,7 @@
 										<div class="col-md-12">       
 											<div class="input-select">
 												<select name="make" id="make" required>
-													<option disabled selected>Select Make</option>
+													<option  selected>Select Make</option>
 													@foreach($makes as $make)
 														<option value="{{ $make->id }}">{{ $make->name }}</option>
 													@endforeach
