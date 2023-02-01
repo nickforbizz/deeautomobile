@@ -1,6 +1,6 @@
 @extends('Web.layout.app')
 
-@section('contents')
+@section('contents') 
 
 
 	<div class="page-heading wow fadeIn" data-wow-duration="0.5s">
