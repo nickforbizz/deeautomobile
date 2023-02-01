@@ -9,7 +9,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="description" content="">
-	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="keywords" content="Cars, Car hire, toyota">
 	<meta name="author" content="Wainaina Nicholas">
 	<meta name="csrf-token" content="{{ csrf_token() }}" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,13 +52,7 @@
 		</div>
 	</div>
 
-	<div id="search">
-		<button type="button" class="close">×</button>
-		<form>
-			<input type="search" value="" placeholder="type keyword(s) here" />
-			<button type="submit" class="primary-button">Search <i class="fa fa-search"></i></button>
-		</form>
-	</div>
+	
 
 	<header class="site-header wow fadeIn" data-wow-duration="1s">
 		<div id="main-header" class="main-header">
@@ -69,45 +63,77 @@
 				<div id='cssmenu'>
 					<ul>
 						<li><a href="{{ route('webin') }}">Homepage</a></li>
-						<li class='active'><a href='#'>Car Listing</a>
-							<ul>
-								<li><a href='#'>Sidebar</a>
-									<ul>
-										<li><a href="{{ route('carListingSideBar') }}">Car Listing</a></li>
-										<li><a href="{{ route('carGridSideBar') }}">Car Grid</a></li>
-									</ul>
-								</li>
-								<li><a href='#'>No Sidebar</a>
-									<ul>
-										<li><a href="{{ route('carListingNoSideBar') }}">Car Listing</a></li>
-										<li><a href="{{ route('carGridNoSideBar') }}">Car Grid</a></li>
-									</ul>
-								</li>
-								<!-- <li><a href="{{ route('singleCar') }}">Single Car</a></li> -->
-							</ul>
-						</li>
-						<li class='active'><a href='#'>Blog</a>
-							<ul>
-								<li><a href='#'>Sidebar</a>
-									<ul>
-										<li><a href="{{ route('blogListingSideBar') }}">Blog Classic</a></li>
-										<li><a href="{{ route('blogGridSideBar') }}">Blog Grid</a></li>
-									</ul>
-								</li>
-								<li><a href='#'>No Sidebar</a>
-									<ul>
-										<li><a href="{{ route('blogListingNoSideBar') }}">Blog Classic</a></li>
-										<li><a href="{{ route('blogGridNoSideBar') }}">Blog Grid</a></li>
-									</ul>
-								</li>
-								<li><a href="{{ route('singlePost') }}">Single Post</a></li>
-							</ul>
-						</li>
+
+						@if($params)
+
+
+							@if($params->car_listing == 'SL')
+								<li><a href="{{ route('carListingSideBar') }}">Car Listing</a></li>
+							@elseif($params->car_listing == 'SG')
+								<li><a href="{{ route('carGridSideBar') }}">Car Grid</a></li>
+							@elseif($params->car_listing == 'NSL')
+								<li><a href="{{ route('carListingNoSideBar') }}">Car Listing</a></li>
+							@else
+								<li><a href="{{ route('carGridNoSideBar') }}">Car Grid</a></li>
+							@endif
+
+							
+
+							@if($params->blog_listing == 'SL')
+							<li><a href="{{ route('blogListingSideBar') }}">Blogs</a></li>
+							@elseif($params->car_listing == 'SG')
+							<li><a href="{{ route('blogGridSideBar') }}">Blogs</a></li>
+							@elseif($params->car_listing == 'NSL')
+							<li><a href="{{ route('blogListingNoSideBar') }}">Blogs</a></li>
+							@else
+							<li><a href="{{ route('blogGridNoSideBar') }}">Blogs</a></li>
+							@endif
+
+						
+
+						@else
+
+							<li class='active'><a href='#'>Car Listing</a>
+								<ul>
+									<li><a href='#'>Sidebar</a>
+										<ul>
+											<li><a href="{{ route('carListingSideBar') }}">Car Listing</a></li>
+											<li><a href="{{ route('carGridSideBar') }}">Car Grid</a></li>
+										</ul>
+									</li>
+									<li><a href='#'>No Sidebar</a>
+										<ul>
+											<li><a href="{{ route('carListingNoSideBar') }}">Car Listing</a></li>
+											<li><a href="{{ route('carGridNoSideBar') }}">Car Grid</a></li>
+										</ul>
+									</li>
+									<!-- <li><a href="{{ route('singleCar') }}">Single Car</a></li> -->
+								</ul>
+							</li>
+							
+							<li class='active'><a href='#'>Blog</a>
+								<ul>
+									<li><a href='#'>Sidebar</a>
+										<ul>
+											<li><a href="{{ route('blogListingSideBar') }}">Blog Classic</a></li>
+											<li><a href="{{ route('blogGridSideBar') }}">Blog Grid</a></li>
+										</ul>
+									</li>
+									<li><a href='#'>No Sidebar</a>
+										<ul>
+											<li><a href="{{ route('blogListingNoSideBar') }}">Blog Classic</a></li>
+											<li><a href="{{ route('blogGridNoSideBar') }}">Blog Grid</a></li>
+										</ul>
+									</li>
+									<li><a href="{{ route('singlePost') }}">Single Post</a></li>
+								</ul>
+							</li>
+
+						@endif
+
 						<li><a href="{{ route('aboutUs') }}">About Us</a></li>
 						<li><a href="{{ route('contactUS') }}">Contact Us</a></li>
-						<li>
-							<a href="#search"><i class="fa fa-search"></i></a>
-						</li>
+						
 					</ul>
 				</div>
 			</div>
