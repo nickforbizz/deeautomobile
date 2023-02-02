@@ -23,17 +23,20 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
-	<link rel="stylesheet" href="{{ asset('/web/css/font-awesome.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('/web/css/main.css') }}">
+	<!-- <link rel="stylesheet" href="{{ asset('/web/css/font-awesome.min.css') }}"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css">
 	<!-- Slider Pro Css -->
 	<link rel="stylesheet" href="{{ asset('/web/css/sliderPro.css') }}">
 	<!-- Owl Carousel Css -->
-	<link rel="stylesheet" href="{{ asset('/web/css/owl-carousel.css') }}">
+	<!-- <link rel="stylesheet" href="{{ asset('/web/css/owl-carousel.css') }}"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<!-- Flat Icons Css -->
 	<link rel="stylesheet" href="{{ asset('/web/css/flaticon.css') }}">
 	<!-- Animated Css -->
-	<link rel="stylesheet" href="{{ asset('/web/css/animated.css') }}">
-
+	<!-- <link rel="stylesheet" href="{{ asset('/web/css/animated.css') }}"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.1/animate.min.css">
+	
+	<link rel="stylesheet" href="{{ asset('/web/css/main.css') }}">
 
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -287,9 +290,9 @@
 
 	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-	<script src="https://code.jquery.com/jquery-3.6.3.min.js" ></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" ></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 	<!-- sweetAlert -->
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
@@ -301,10 +304,12 @@
 	<script src="{{ asset('/web/js/sliderpro.min.js') }}"></script>
 
 	<!-- Slick Slider Js -->
-	<script src="{{ asset('/web/js/slick.js') }}"></script>
+	<!-- <script src="{{ asset('/web/js/slick.js') }}"></script> -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.0/slick.js"></script>
 
 	<!-- Owl Carousel Js -->
-	<script src="{{ asset('/web/js/owl.carousel.min.js') }}"></script>
+	<!-- <script src="{{ asset('/web/js/owl.carousel.min.js') }}"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 
 	<!-- Boostrap Js -->
