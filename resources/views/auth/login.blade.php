@@ -32,22 +32,22 @@
                 </div>
                 @endif
     
-                <form method="POST" action="{{ route('login') }}" class="form">
+                <form method="POST" action="{{ route('login') }}" class="form" id="login_form">
                     @csrf
     
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="text" class="form-control" name="email" id="email" placeholder="Your email..." value="{{old('email')}}" required autofocus />
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Your email..." value="{{old('email')}}" required autocomplete />
                     </div>
     
                     <div class="form-group mt-4">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Your password..." value="{{old('password')}}" required autocomplete="current-password" />
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Your password..." value="{{old('password')}}" required/>
                     </div>
     
                     <div class="block mt-4">
                         <label for="remember_me" class="flex items-center">
-                            <input id="remember_me" type="checkbox" class="form-checkbox" name="remember">
+                            <input id="remember_me" type="checkbox" class="form-checkbox" name="remember" />
                             <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                         </label>
                     </div>
@@ -58,8 +58,7 @@
                             {{ __('Forgot your password?') }}
                         </a>
                         @endif
-    
-                        <button type="submit" class="btn btn-info ml-4">submit</button>
+                        <button type="submit" class="btn btn-primary ml-4" id="login_submit">Login</button>
                     </div>
                 </form>
 
@@ -78,3 +77,19 @@
 
 
 @endsection
+
+@push('scripts')
+
+<script>
+
+$(document).ready(function() {
+    $("#login_submit").click(()=>{
+        $("#login_form").submit()
+    })
+
+})
+</script>
+
+
+
+@endpush
