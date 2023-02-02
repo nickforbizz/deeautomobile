@@ -2,11 +2,11 @@
 
 namespace App\Providers;
 
-use App\Models\Parameter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
+use App\Models\Parameter;
 
 class AppServiceProvider extends ServiceProvider
 {

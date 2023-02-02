@@ -28,7 +28,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/logout', 'HomeController@logout')->name('logout');
 
 
-
+Route::post('/test', function () {
+    return 'some thing'; 
+})->name('test');
 
 
 
