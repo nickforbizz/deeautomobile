@@ -32,7 +32,7 @@
                 </div>
                 @endif
     
-                <form method="POST" action="{{ route('login') }}" class="form">
+                <form method="POST" action="{{ route('login') }}" class="form" id="login_form">
                     @csrf
     
                     <div class="form-group">
@@ -58,7 +58,7 @@
                             {{ __('Forgot your password?') }}
                         </a>
                         @endif
-                        <button type="submit" class="btn btn-primary ml-4">Login</button>
+                        <button type="submit" class="btn btn-primary ml-4" id="login_submit">Login</button>
                     </div>
                 </form>
 
@@ -77,3 +77,19 @@
 
 
 @endsection
+
+@push('scripts')
+
+<script>
+
+$(document).ready(function() {
+    $("#login_submit").click(()=>{
+        $("#login_form").submit()
+    })
+
+})
+</script>
+
+
+
+@endpush

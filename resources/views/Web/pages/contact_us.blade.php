@@ -69,6 +69,7 @@
 								<ul>
 									<li><i class="fa fa-phone"></i><span>+1 123 489-5748</span></li>
 									<li><i class="fa fa-envelope"></i><span>youremail@gmail.com</span></li>
+									<li><button class="btn btn-primary btn-rounded pt-2 pb-2 pl-5 pr-5" id="bookride">Book A Ride</button></li>
 								</ul>
 							</div>
 						</div>
@@ -78,15 +79,7 @@
 		</div>
 	</section>
 
-	<!-- book a ride -->
-	<section>
-		<div class="contact-us wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1s">
-			<div class="text-center">
-				<button class="btn btn-primary btn-rounded pt-2 pb-2 pl-5 pr-5" id="bookride">Book A Ride</button>
-			</div>
-			<div class="sep-section-heading"></div>
-		</div>
-	</section>
+
 
 	<!-- map -->
 	<section>
@@ -98,7 +91,7 @@
 
 	<!-- modal -->
     <section>
-        <div class="modal fade" id="bookRideModal" tabindex="-1" role="dialog" aria-labelledby="bookRideModalLabel" aria-hidden="true">
+        <div class="modal fade" id="bookRideModal" tabindex="-1" role="dialog" aria-labelledby="bookRideModalLabel" aria-hidden="true" >
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
 
