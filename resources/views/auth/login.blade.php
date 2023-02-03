@@ -31,6 +31,7 @@
                     {{ session('status') }}
                 </div>
                 @endif
+                
     
                 <form method="POST" action="{{ route('login') }}" class="form" id="login_form">
                     @csrf
